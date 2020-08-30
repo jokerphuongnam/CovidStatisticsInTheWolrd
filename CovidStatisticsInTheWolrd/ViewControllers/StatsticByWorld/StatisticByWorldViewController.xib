@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StatisticByWorldViewController" customModule="CovidStatistic" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moI-3O-dqD">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jep-4U-woM">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="jep-4U-woM" firstAttribute="top" secondItem="J75-z2-id4" secondAttribute="top" id="GPH-rY-Wd5"/>
+                        <constraint firstItem="jep-4U-woM" firstAttribute="leading" secondItem="J75-z2-id4" secondAttribute="leading" id="He7-Ya-dJU"/>
+                        <constraint firstItem="J75-z2-id4" firstAttribute="trailing" secondItem="jep-4U-woM" secondAttribute="trailing" id="K0C-AS-vhe"/>
+                        <constraint firstItem="J75-z2-id4" firstAttribute="bottom" secondItem="jep-4U-woM" secondAttribute="bottom" id="OPR-ua-k0t"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="7ec-OP-r4i"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="J75-z2-id4"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="moI-3O-dqD" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="0ac-VW-SgL"/>
+                <constraint firstItem="moI-3O-dqD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0kZ-0G-bg1"/>
+                <constraint firstItem="moI-3O-dqD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="NqM-bJ-Q4I"/>
+                <constraint firstAttribute="bottom" secondItem="moI-3O-dqD" secondAttribute="bottom" id="gY3-t5-VTm"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="140.57971014492756" y="150.66964285714286"/>
+        </view>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EBA-E0-ZtU">
+            <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <state key="normal" title="Button"/>
+            <point key="canvasLocation" x="-190" y="90"/>
+        </button>
+    </objects>
+</document>
