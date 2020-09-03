@@ -2,22 +2,22 @@ import Foundation
 import PromiseKit
 import RealmSwift
 
-protocol CountryFlagsLocalProtocol {
+public protocol CountryFlagsLocalProtocol {
     //lưu dữ liệu xuống local làm cache
     func addFlag(with countryCode: String,then image: UIImage) throws
     //lấy dữ liệu từ local lên
     func getFlag(with countryCode: String) -> Promise<UIImage?>
 }
 
-class CountryFlagsRealm: CountryFlagsLocalProtocol{
+public final class CountryFlagsRealm: CountryFlagsLocalProtocol{
     private let realm: Realm
     
-    init(realm : Realm) {
+    public init(realm : Realm) {
         self.realm = realm
     }
     
     //lưu dữ liệu xuống Realm làm cache
-    func addFlag(with countryCode: String, then image: UIImage) throws {
+    public func addFlag(with countryCode: String, then image: UIImage) throws {
         do {
             try realm.write {
                 realm.add(CountryImage(countryCode: countryCode, image: image))
@@ -28,7 +28,7 @@ class CountryFlagsRealm: CountryFlagsLocalProtocol{
     }
     
     //lấy dữ liệu từ Realm lên
-    func getFlag(with countryCode: String) -> Promise<UIImage?> {
+    public func getFlag(with countryCode: String) -> Promise<UIImage?> {
         Promise<UIImage?>{ resolver in
             //tạo luồng khác để lấy dữ liệu
             DispatchQueue.global(qos: .utility).async {

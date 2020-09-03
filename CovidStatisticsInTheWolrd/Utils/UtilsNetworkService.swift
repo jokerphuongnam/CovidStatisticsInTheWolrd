@@ -2,16 +2,16 @@ import Foundation
 import PromiseKit
 import Network
 
-protocol UtilsNetworkProtocol{
+public protocol UtilsNetworkProtocol{
     var monitor: NWPathMonitor {get}
     var _queue: DispatchQueue? {get set}
     //Kiểm tra việc kết nối mạng
     func statusConnectedInternet() -> Promise<NWPath.Status>
 }
 
-extension UtilsNetworkProtocol {
+fileprivate extension UtilsNetworkProtocol {
     //Tạo luồng
-    internal var queue: DispatchQueue? {
+    var queue: DispatchQueue? {
         get{
             var parent: UtilsNetworkProtocol = self
             if parent._queue == nil{
@@ -22,17 +22,17 @@ extension UtilsNetworkProtocol {
     }
 }
 
-class DefaultUtilsNetwork: UtilsNetworkProtocol {
-    internal var _queue: DispatchQueue? = nil
+public final class DefaultUtilsNetwork: UtilsNetworkProtocol {
+    public var _queue: DispatchQueue? = nil
     
     init(_ monitor: NWPathMonitor){
         self.monitor = monitor
     }
     
-    internal var monitor: NWPathMonitor
+    public var monitor: NWPathMonitor
     
     //Kiểm tra việc kết nối mạng
-    func statusConnectedInternet() -> Promise<NWPath.Status> {
+    public func statusConnectedInternet() -> Promise<NWPath.Status> {
         Promise<NWPath.Status>{resolver in
             monitor.pathUpdateHandler = {path in
                 resolver.fulfill(path.status)
