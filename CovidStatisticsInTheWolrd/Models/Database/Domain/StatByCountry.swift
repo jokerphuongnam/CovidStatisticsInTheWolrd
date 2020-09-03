@@ -1,19 +1,24 @@
 import Foundation
+import RealmSwift
 
-public struct StatByCountry: Codable{
+public final class StatByCountry: Object, Codable {
     public init(_ country: String?, _ latestStatByCountry: [LastedStat]?) {
-        self._country = country
-        self._latestStatByCountry = latestStatByCountry
+        self._pCountry = country
+        self._pLatestStatByCountry = latestStatByCountry
     }
     
-    private var _country: String?
-    private var _latestStatByCountry: [LastedStat]?
+    public required init() {
+        super.init()
+    }
     
-    public var country: String? {get{_country}}
-    public var latestStatByCountry: [LastedStat]? {get{_latestStatByCountry}}
+    private var _pCountry: String? = ""
+    private var _pLatestStatByCountry: [LastedStat]? = [LastedStat]()
+    
+    public var country: String? {get{_pCountry}}
+    public var latestStatByCountry: [LastedStat]? {get{_pLatestStatByCountry}}
     
     enum CodingKeys: String, CodingKey {
-        case _country = "country"
-        case _latestStatByCountry = "latest_stat_by_country"
+        case _pCountry = "country"
+        case _pLatestStatByCountry = "latest_stat_by_country"
     }
 }

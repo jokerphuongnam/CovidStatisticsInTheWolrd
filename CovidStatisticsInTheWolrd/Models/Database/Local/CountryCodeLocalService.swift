@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-protocol CountryCodeLocalProtocol {
+public protocol CountryCodeLocalProtocol {
     var countryCodes : [String: String]! {get}
     
     //lấy 1 countryCode từ dictionary (countryCodeList)
@@ -14,16 +14,16 @@ protocol CountryCodeLocalProtocol {
     var fileName: String {get}
 }
 
-public class DefaultCountryCodeLocal: CountryCodeLocalProtocol{
-    var fileName: String = "ListCountryCode"
+public final class DefaultCountryCodeLocal: CountryCodeLocalProtocol{
+    public var fileName: String = "ListCountryCode"
     
     private var encode: JSONEncoder = JSONEncoder()
     private var decode: JSONDecoder = JSONDecoder()
     
-    internal var countryCodes: [String : String]!
+    public var countryCodes: [String : String]!
     
     //nạp dữ liệu vào dictionary (countryCodeList)
-    func fetchCountryCodes() throws {
+    public func fetchCountryCodes() throws {
         guard let asset = NSDataAsset(name: fileName) else {
             throw AppError.cannotOpenAsset(mess: "Cannot open \(fileName)")
         }
@@ -40,7 +40,7 @@ public class DefaultCountryCodeLocal: CountryCodeLocalProtocol{
     }
     
     //lấy 1 countryCode từ dictionary (countryCodeList)
-    func getCountryCode(with countryName: String) throws -> String? {
+    public func getCountryCode(with countryName: String) throws -> String? {
         //nếu dictionary bị rỗng thì lấy dữ liệu từ local lên
         if countryCodes == nil {
             do{
@@ -54,7 +54,7 @@ public class DefaultCountryCodeLocal: CountryCodeLocalProtocol{
     }
     
     //lấy toàn bộ countryCode từ Data Asset xong lưu vào 1 dictionary (countryCodeList)
-    func getCountryCodes() throws -> [String : String]? {
+    public func getCountryCodes() throws -> [String : String]? {
         if countryCodes == nil {
             guard let asset = NSDataAsset(name: fileName) else {
                 return nil

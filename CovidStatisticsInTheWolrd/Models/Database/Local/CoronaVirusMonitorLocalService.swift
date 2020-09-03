@@ -1,7 +1,7 @@
 import Foundation
 import PromiseKit
 
-protocol CoronaVirusMonitorLocalProtocol{
+public protocol CoronaVirusMonitorLocalProtocol{
     //lấy thống kê theo quốc gia từ Local
     func getStatByCountry(with countryCode: String) -> Promise<StatByCountry?>
     //lấy thống kê theo quốc gia từ Local

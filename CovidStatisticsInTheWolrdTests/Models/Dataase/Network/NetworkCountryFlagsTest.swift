@@ -8,7 +8,7 @@ class NetworkCountryFlagsTest: XCTestCase {
     var sut: CountryFlagsNetworkProtocol!
     
     override func setUp() {
-        sut = DefaultCountryFlagsNetwork(utils: MockUtilsNetwork())
+        sut = DefaultCountryFlagsNetwork()
     }
     
     override func tearDown() {

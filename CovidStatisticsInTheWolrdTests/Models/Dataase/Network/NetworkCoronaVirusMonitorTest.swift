@@ -8,7 +8,7 @@ class NetworkCoronaVirusMonitorTest: XCTestCase {
     var sut: CoronaVirusMonitorNetworkProtocol? = nil
     
     override func setUp() {
-        sut = CoronaVirusMonitorAlamofire(utils: MockUtilsNetwork())
+        sut = CoronaVirusMonitorAlamofire()
     }
     
     override func tearDown() {

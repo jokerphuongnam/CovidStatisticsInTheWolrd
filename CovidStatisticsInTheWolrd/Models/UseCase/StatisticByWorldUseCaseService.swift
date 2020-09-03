@@ -2,7 +2,7 @@ import Foundation
 import PromiseKit
 
 //tổng hợp các repository cho màn hình StatisticByWorld
-protocol StatisticByWorldUseCaseProtocol {
+public protocol StatisticByWorldUseCaseProtocol {
     var repoCountryFlags: CountrysFlagsRepositoryProtocol {get}
     var repoCoronaVirusMonitor: CoronaVirusMonitorRepositoryProtocol {get}
     var repoCountryCode: CountryCodeRepositoryProtocol {get}

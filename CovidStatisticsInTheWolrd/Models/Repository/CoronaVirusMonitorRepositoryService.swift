@@ -2,9 +2,10 @@ import Foundation
 import PromiseKit
 
 //lấy dữ liệu từ online sau đó lưu về offline và trả về dữ liệu
-protocol CoronaVirusMonitorRepositoryProtocol {
+public protocol CoronaVirusMonitorRepositoryProtocol {
     var network: CoronaVirusMonitorNetworkProtocol {get}
     var local: CoronaVirusMonitorLocalProtocol {get}
+    var utils: UtilsNetworkProtocol {get}
     
     //lấy thống kê theo quốc gia
     func fetchStatByCountry(with countryCode: String) -> Promise<StatByCountry?>

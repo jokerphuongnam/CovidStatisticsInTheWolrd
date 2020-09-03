@@ -85,6 +85,9 @@
 		F34DA08C24FA62EC00194E6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34DA08B24FA62EC00194E6A /* AppDelegate.swift */; };
 		F34DA08D24FA62EC00194E6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34DA08B24FA62EC00194E6A /* AppDelegate.swift */; };
 		F34DA08E24FA62EC00194E6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34DA08B24FA62EC00194E6A /* AppDelegate.swift */; };
+		F35B78382500F60B00F4D2B5 /* ContainerObjectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35B78372500F60B00F4D2B5 /* ContainerObjectService.swift */; };
+		F35B78392500F60B00F4D2B5 /* ContainerObjectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35B78372500F60B00F4D2B5 /* ContainerObjectService.swift */; };
+		F35B783A2500F60B00F4D2B5 /* ContainerObjectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35B78372500F60B00F4D2B5 /* ContainerObjectService.swift */; };
 		F35F0D3B24FBA9FC002B280C /* UtilsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35F0D3A24FBA9FC002B280C /* UtilsNetworkService.swift */; };
 		F35F0D3C24FBA9FC002B280C /* UtilsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35F0D3A24FBA9FC002B280C /* UtilsNetworkService.swift */; };
 		F35F0D3D24FBA9FC002B280C /* UtilsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35F0D3A24FBA9FC002B280C /* UtilsNetworkService.swift */; };
@@ -156,6 +159,7 @@
 		F34DA07024FA58DD00194E6A /* ViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		F34DA07124FA58DD00194E6A /* LiveData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveData.swift; sourceTree = "<group>"; };
 		F34DA08B24FA62EC00194E6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F35B78372500F60B00F4D2B5 /* ContainerObjectService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerObjectService.swift; sourceTree = "<group>"; };
 		F35F0D3A24FBA9FC002B280C /* UtilsNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilsNetworkService.swift; sourceTree = "<group>"; };
 		F3C50C5724FBB201001AB183 /* CountryCodeLocalTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryCodeLocalTest.swift; sourceTree = "<group>"; };
 		F3C50C5824FBB201001AB183 /* CountryFlagsLocalTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryFlagsLocalTest.swift; sourceTree = "<group>"; };
@@ -303,6 +307,7 @@
 		F34D9FF724FA557000194E6A /* DI */ = {
 			isa = PBXGroup;
 			children = (
+				F35B78372500F60B00F4D2B5 /* ContainerObjectService.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -422,11 +427,35 @@
 			path = StatsticByCountry;
 			sourceTree = "<group>";
 		};
-		F35F0D3E24FBABF4002B280C /* Models */ = {
+		F35B78322500F1BD00F4D2B5 /* Dataase */ = {
 			isa = PBXGroup;
 			children = (
 				F3C50C5624FBB201001AB183 /* Local */,
 				F3C50C5B24FBB20C001AB183 /* Network */,
+			);
+			path = Dataase;
+			sourceTree = "<group>";
+		};
+		F35B78332500F1C800F4D2B5 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		F35B78362500F21B00F4D2B5 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		F35F0D3E24FBABF4002B280C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F35B78322500F1BD00F4D2B5 /* Dataase */,
+				F35B78332500F1C800F4D2B5 /* Repository */,
+				F35B78362500F21B00F4D2B5 /* UseCase */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -448,6 +477,7 @@
 		F35F0D4124FBAC16002B280C /* Ultis */ = {
 			isa = PBXGroup;
 			children = (
+				F3C50C5C24FBB20C001AB183 /* MockUltisNetwork.swift */,
 				F3C50C6224FBB21B001AB183 /* UtilsNetworkTest.swift */,
 			);
 			path = Ultis;
@@ -465,9 +495,8 @@
 		F3C50C5B24FBB20C001AB183 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				F3C50C5C24FBB20C001AB183 /* MockUltisNetwork.swift */,
-				F3C50C5D24FBB20C001AB183 /* NetworkCoronaVirusMonitorTest.swift */,
 				F3C50C5E24FBB20C001AB183 /* NetworkCountryFlagsTest.swift */,
+				F3C50C5D24FBB20C001AB183 /* NetworkCoronaVirusMonitorTest.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -732,6 +761,7 @@
 				F34DA00424FA573A00194E6A /* CountrysFlagsRepositoryService.swift in Sources */,
 				F34DA01F24FA587600194E6A /* CountryImage.swift in Sources */,
 				F34DA03A24FA589300194E6A /* StatisticByWorldViewModelService.swift in Sources */,
+				F35B78382500F60B00F4D2B5 /* ContainerObjectService.swift in Sources */,
 				F34D9FC724FA53D100194E6A /* SceneDelegate.swift in Sources */,
 				F34DA07B24FA58DD00194E6A /* LiveData.swift in Sources */,
 				F34DA03324FA588300194E6A /* CountryFlagsNetworkService.swift in Sources */,
@@ -754,6 +784,7 @@
 				F3C50C6024FBB20C001AB183 /* NetworkCoronaVirusMonitorTest.swift in Sources */,
 				F3C50C6124FBB20C001AB183 /* NetworkCountryFlagsTest.swift in Sources */,
 				F34DA07924FA58DD00194E6A /* ViewControllerExtension.swift in Sources */,
+				F35B78392500F60B00F4D2B5 /* ContainerObjectService.swift in Sources */,
 				F34DA00B24FA573A00194E6A /* CountryCodeRepositoryService.swift in Sources */,
 				F35F0D3C24FBA9FC002B280C /* UtilsNetworkService.swift in Sources */,
 				F34DA08D24FA62EC00194E6A /* AppDelegate.swift in Sources */,
@@ -790,6 +821,7 @@
 				F34DA03824FA588300194E6A /* CoronaVirusMonitorNetworkService.swift in Sources */,
 				F34DA07A24FA58DD00194E6A /* ViewControllerExtension.swift in Sources */,
 				F34DA00C24FA573A00194E6A /* CountryCodeRepositoryService.swift in Sources */,
+				F35B783A2500F60B00F4D2B5 /* ContainerObjectService.swift in Sources */,
 				F34DA02D24FA587D00194E6A /* CoronaVirusMonitorLocalService.swift in Sources */,
 				F34DA06124FA58CF00194E6A /* WorldTotalStatViewController.swift in Sources */,
 				F34DA02424FA587600194E6A /* StatByCountry.swift in Sources */,

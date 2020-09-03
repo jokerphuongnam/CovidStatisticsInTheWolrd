@@ -1,7 +1,7 @@
 import Foundation
 
 //Custom Error
-enum AppError: Error{
+public enum AppError: Error{
     case urlNil
     case dataNil
     case cannotCreateThread(mess: String)
@@ -11,6 +11,6 @@ enum AppError: Error{
 }
 
 //Lỗi của Realm
-enum RealmError: Error{
+public enum RealmError: Error{
     case cannotOpenWrite
 }
