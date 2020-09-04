@@ -4,24 +4,24 @@ import PromiseKit
 @testable import CovidStatisticsInTheWolrd
 
 class CountryFlagsLocalTest: XCTestCase {
+    
     var sut: CountryFlagsLocalProtocol! = nil
     var realm: Realm!
     
     override func setUp() {
-        Realm.Configuration.defaultConfiguration.inMemoryIdentifier = self.name
-        do{
-            realm = try Realm()
-        }catch{
-            return
-        }
+        realm = CreateRealmTest.realm(name: self.name)
         sut = CountryFlagsRealm(realm: realm)
     }
     
     override func tearDown() {
         sut = nil
-        try! realm.write {
-            realm.deleteAll()
-        }
         realm = nil
+    }
+    
+    func test_addFlag_noThrowError(){
+        let countryCode = "VN"
+        let image = UIImage()
+        
+        XCTAssertThrowsError(try sut.addFlag(with: countryCode, then: image))
     }
 }

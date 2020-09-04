@@ -20,7 +20,7 @@ public final class CountryFlagsRealm: CountryFlagsLocalProtocol{
     public func addFlag(with countryCode: String, then image: UIImage) throws {
         do {
             try realm.write {
-                realm.add(CountryImage(countryCode: countryCode, image: image))
+                realm.add(CountryImage(countryCode: countryCode.lowercaseAndTrimSpace, image: image))
             }
         }catch{
             throw RealmError.cannotOpenWrite

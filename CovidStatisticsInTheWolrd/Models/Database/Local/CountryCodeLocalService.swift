@@ -1,4 +1,3 @@
-import Foundation
 import UIKit
 
 public protocol CountryCodeLocalProtocol {
@@ -15,10 +14,15 @@ public protocol CountryCodeLocalProtocol {
 }
 
 public final class DefaultCountryCodeLocal: CountryCodeLocalProtocol{
+    internal init(encode: JSONEncoder, decode: JSONDecoder) {
+        self.encode = encode
+        self.decode = decode
+    }
+    
     public var fileName: String = "ListCountryCode"
     
-    private var encode: JSONEncoder = JSONEncoder()
-    private var decode: JSONDecoder = JSONDecoder()
+    private var encode: JSONEncoder
+    private var decode: JSONDecoder
     
     public var countryCodes: [String : String]!
     

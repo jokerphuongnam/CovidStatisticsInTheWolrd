@@ -2,36 +2,32 @@ import Foundation
 import RealmSwift
 
 public final class LastedStat : Object,Codable {
-    public init(_ totalCases: String,_ newases: String,_ totalDeaths: String,_ newDeaths: String,_ totalRecovered: String,_ activeCases: String, _ seriousCritical: String) {
-        self._pTotalCases = totalCases
-        self._pNewases = newases
-        self._pTotalDeaths = totalDeaths
-        self._pNewDeaths = newDeaths
-        self._pTotalRecovered = totalRecovered
-        self._pActiveCases = activeCases
-        self._pSeriousCritical = seriousCritical
-    }
     
     public required init() {
         super.init()
     }
     
-    private var _pTotalCases: String = ""
-    private var _pNewases: String = ""
-    private var _pTotalDeaths: String = ""
-    private var _pNewDeaths: String = ""
-    private var _pTotalRecovered: String = ""
-    private var _pActiveCases: String = ""
-    private var _pSeriousCritical: String = ""
+    public override class func primaryKey() -> String? {
+        return "_key"
+    }
     
-    public var totalCases: String{get{_pTotalCases}}
-    public var newases: String{get{_pNewases}}
-    public var totalDeaths: String{get{_pTotalDeaths}}
-    public var newDeaths: String{get{_pTotalRecovered}}
-    public var totalRecovered: String{get{_pTotalCases}}
-    public var activeCases: String{get{_pActiveCases}}
-    public var seriousCritical: String{get{_pSeriousCritical}}
+    @objc dynamic private var _key: String! = ""
+    @objc dynamic private var _pTotalCases: String! = ""
+    @objc dynamic private var _pNewases: String! = ""
+    @objc dynamic private var _pTotalDeaths: String! = ""
+    @objc dynamic private var _pNewDeaths: String! = ""
+    @objc dynamic private var _pTotalRecovered: String! = ""
+    @objc dynamic private var _pActiveCases: String! = ""
+    @objc dynamic private var _pSeriousCritical: String! = ""
     
+    public var key: String? {get{_key} set{_key = newValue}}
+    public var totalCases: String?{get{_pTotalCases}}
+    public var newases: String?{get{_pNewases}}
+    public var totalDeaths: String?{get{_pTotalDeaths}}
+    public var newDeaths: String?{get{_pTotalRecovered}}
+    public var totalRecovered: String?{get{_pTotalCases}}
+    public var activeCases: String?{get{_pActiveCases}}
+    public var seriousCritical: String?{get{_pSeriousCritical}}
     
     enum CodingKeys: String, CodingKey {
         case _pTotalCases = "total_cases"

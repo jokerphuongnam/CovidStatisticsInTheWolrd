@@ -97,6 +97,11 @@
 		F3C50C6024FBB20C001AB183 /* NetworkCoronaVirusMonitorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C50C5D24FBB20C001AB183 /* NetworkCoronaVirusMonitorTest.swift */; };
 		F3C50C6124FBB20C001AB183 /* NetworkCountryFlagsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C50C5E24FBB20C001AB183 /* NetworkCountryFlagsTest.swift */; };
 		F3C50C6324FBB21B001AB183 /* UtilsNetworkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C50C6224FBB21B001AB183 /* UtilsNetworkTest.swift */; };
+		F3CB6EF325022D7100533EC7 /* CreateRealmTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CB6EF225022D7100533EC7 /* CreateRealmTest.swift */; };
+		F3CB6EF525022E4500533EC7 /* CoronaVirusMonitorLocalTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CB6EF425022E4500533EC7 /* CoronaVirusMonitorLocalTest.swift */; };
+		F3CB6EF7250277E300533EC7 /* ContainerInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CB6EF6250277E300533EC7 /* ContainerInject.swift */; };
+		F3CB6EF8250277E300533EC7 /* ContainerInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CB6EF6250277E300533EC7 /* ContainerInject.swift */; };
+		F3CB6EF9250277E300533EC7 /* ContainerInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CB6EF6250277E300533EC7 /* ContainerInject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +172,9 @@
 		F3C50C5D24FBB20C001AB183 /* NetworkCoronaVirusMonitorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkCoronaVirusMonitorTest.swift; sourceTree = "<group>"; };
 		F3C50C5E24FBB20C001AB183 /* NetworkCountryFlagsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkCountryFlagsTest.swift; sourceTree = "<group>"; };
 		F3C50C6224FBB21B001AB183 /* UtilsNetworkTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilsNetworkTest.swift; sourceTree = "<group>"; };
+		F3CB6EF225022D7100533EC7 /* CreateRealmTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRealmTest.swift; sourceTree = "<group>"; };
+		F3CB6EF425022E4500533EC7 /* CoronaVirusMonitorLocalTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoronaVirusMonitorLocalTest.swift; sourceTree = "<group>"; };
+		F3CB6EF6250277E300533EC7 /* ContainerInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerInject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				F35B78372500F60B00F4D2B5 /* ContainerObjectService.swift */,
+				F3CB6EF6250277E300533EC7 /* ContainerInject.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -479,6 +488,7 @@
 			children = (
 				F3C50C5C24FBB20C001AB183 /* MockUltisNetwork.swift */,
 				F3C50C6224FBB21B001AB183 /* UtilsNetworkTest.swift */,
+				F3CB6EF225022D7100533EC7 /* CreateRealmTest.swift */,
 			);
 			path = Ultis;
 			sourceTree = "<group>";
@@ -488,6 +498,7 @@
 			children = (
 				F3C50C5724FBB201001AB183 /* CountryCodeLocalTest.swift */,
 				F3C50C5824FBB201001AB183 /* CountryFlagsLocalTest.swift */,
+				F3CB6EF425022E4500533EC7 /* CoronaVirusMonitorLocalTest.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -760,6 +771,7 @@
 				F34DA01C24FA587600194E6A /* LastedStat.swift in Sources */,
 				F34DA00424FA573A00194E6A /* CountrysFlagsRepositoryService.swift in Sources */,
 				F34DA01F24FA587600194E6A /* CountryImage.swift in Sources */,
+				F3CB6EF7250277E300533EC7 /* ContainerInject.swift in Sources */,
 				F34DA03A24FA589300194E6A /* StatisticByWorldViewModelService.swift in Sources */,
 				F35B78382500F60B00F4D2B5 /* ContainerObjectService.swift in Sources */,
 				F34D9FC724FA53D100194E6A /* SceneDelegate.swift in Sources */,
@@ -782,6 +794,7 @@
 				F34DA00524FA573A00194E6A /* CountrysFlagsRepositoryService.swift in Sources */,
 				F34DA03724FA588300194E6A /* CoronaVirusMonitorNetworkService.swift in Sources */,
 				F3C50C6024FBB20C001AB183 /* NetworkCoronaVirusMonitorTest.swift in Sources */,
+				F3CB6EF525022E4500533EC7 /* CoronaVirusMonitorLocalTest.swift in Sources */,
 				F3C50C6124FBB20C001AB183 /* NetworkCountryFlagsTest.swift in Sources */,
 				F34DA07924FA58DD00194E6A /* ViewControllerExtension.swift in Sources */,
 				F35B78392500F60B00F4D2B5 /* ContainerObjectService.swift in Sources */,
@@ -791,6 +804,7 @@
 				F3C50C6324FBB21B001AB183 /* UtilsNetworkTest.swift in Sources */,
 				F34DA02C24FA587D00194E6A /* CoronaVirusMonitorLocalService.swift in Sources */,
 				F3C50C5A24FBB201001AB183 /* CountryFlagsLocalTest.swift in Sources */,
+				F3CB6EF8250277E300533EC7 /* ContainerInject.swift in Sources */,
 				F3C50C5F24FBB20C001AB183 /* MockUltisNetwork.swift in Sources */,
 				F34DA06024FA58CF00194E6A /* WorldTotalStatViewController.swift in Sources */,
 				F34DA02324FA587600194E6A /* StatByCountry.swift in Sources */,
@@ -808,6 +822,7 @@
 				F34DA06624FA58CF00194E6A /* StatisticByWorldViewController.swift in Sources */,
 				F34DA00F24FA575000194E6A /* StatisticByWorldUseCaseService.swift in Sources */,
 				F34DA03B24FA589300194E6A /* StatisticByWorldViewModelService.swift in Sources */,
+				F3CB6EF325022D7100533EC7 /* CreateRealmTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -828,6 +843,7 @@
 				F34DA01824FA586900194E6A /* AppError.swift in Sources */,
 				F34DA02124FA587600194E6A /* CountryImage.swift in Sources */,
 				F34DA07D24FA58DD00194E6A /* LiveData.swift in Sources */,
+				F3CB6EF9250277E300533EC7 /* ContainerInject.swift in Sources */,
 				F34DA06D24FA58CF00194E6A /* StatsticByCountryViewController.swift in Sources */,
 				F34DA03024FA587D00194E6A /* CountryCodeLocalService.swift in Sources */,
 				F34DA07724FA58DD00194E6A /* StringExtension.swift in Sources */,

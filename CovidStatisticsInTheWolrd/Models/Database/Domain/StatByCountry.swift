@@ -2,20 +2,20 @@ import Foundation
 import RealmSwift
 
 public final class StatByCountry: Object, Codable {
-    public init(_ country: String?, _ latestStatByCountry: [LastedStat]?) {
-        self._pCountry = country
-        self._pLatestStatByCountry = latestStatByCountry
-    }
     
     public required init() {
         super.init()
     }
     
-    private var _pCountry: String? = ""
-    private var _pLatestStatByCountry: [LastedStat]? = [LastedStat]()
+    public override class func primaryKey() -> String? {
+        return "_pCountry"
+    }
+    
+    @objc dynamic private var _pCountry: String? = ""
+    private var _pLatestStatByCountry: List<LastedStat>? = nil
     
     public var country: String? {get{_pCountry}}
-    public var latestStatByCountry: [LastedStat]? {get{_pLatestStatByCountry}}
+    public var latestStatByCountry: List<LastedStat>? {get{_pLatestStatByCountry}}
     
     enum CodingKeys: String, CodingKey {
         case _pCountry = "country"

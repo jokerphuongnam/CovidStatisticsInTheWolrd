@@ -1,4 +1,5 @@
 import XCTest
+import Foundation
 @testable import CovidStatisticsInTheWolrd
 
 class CountryLocalCodeTest: XCTestCase {
@@ -6,7 +7,7 @@ class CountryLocalCodeTest: XCTestCase {
     var sut: CountryCodeLocalProtocol!
     
     override func setUp() {
-        sut = DefaultCountryCodeLocal()
+        sut = DefaultCountryCodeLocal(encode: JSONEncoder(), decode: JSONDecoder())
     }
     
     override func tearDown() {

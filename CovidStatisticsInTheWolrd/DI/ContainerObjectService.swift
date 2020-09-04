@@ -64,9 +64,11 @@ public final class ContainerSwinject: ContainerObjectProtocal {
     //khởi tạo Locals
     public func createLocals() {
         //init CountryCodeLocal
-        container.register(CountryCodeLocalProtocol.self) { _ in DefaultCountryCodeLocal()}.inObjectScope(ObjectScope.container)
+        container.register(CountryCodeLocalProtocol.self) { _ in DefaultCountryCodeLocal(encode: JSONEncoder(), decode: JSONDecoder())}.inObjectScope(ObjectScope.container)
         //init CountryFlagsLocal
         container.register(CountryFlagsLocalProtocol.self) { _ in CountryFlagsRealm(realm: self.resolve())}
+        //init CoronaVirusMonitor
+        container.register(CoronaVirusMonitorLocalProtocol.self) { _ in CoronaVirusMonitorRealm(realm: self.resolve())}
     }
     
     //khởi tạo Network

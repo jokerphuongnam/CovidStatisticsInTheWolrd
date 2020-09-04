@@ -8,14 +8,16 @@ public final class CountryImage: Object {
     }
     
     public required init() {
-        self._pCountryCode = nil
-        self._pImage = nil
+        super.init()
     }
     
-    private var _pCountryCode: String!
-    private var _pImage: UIImage!
+    public override class func primaryKey() -> String? {
+        return "_pCountryCode"
+    }
     
-    public var countryCode: String{get{_pCountryCode}}
+    @objc dynamic private var _pCountryCode: String!
+    @objc dynamic private var _pImage: UIImage!
     
-    public var image: UIImage{get{_pImage}}
+    public var countryCode: String?{get{_pCountryCode}}
+    public var image: UIImage?{get{_pImage}}
 }

@@ -1,8 +1,10 @@
 import UIKit
 
-public extension UIViewController {
+extension UIViewController: ContainerInject{
+    public typealias Container = ContainerSwinject
+    
     //get object from AppDelegate
-    func resolve<T>() -> T {
-        return ContainerSwinject.instance.resolve()
+    public func resolve<T>() -> T {
+        return container.resolve()
     }
 }
